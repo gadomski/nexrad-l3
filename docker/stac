@@ -17,6 +17,6 @@ will be reflected in the execution.
 
 if [ "${BASH_SOURCE[0]}" = "${0}" ]; then
     docker run --rm -it \
-        -v `pwd`:/src/stactools-package \
-        stactools-package:latest "${@}"
+        -v `pwd`:/src/stactools-nexrad-l3 \
+        stactools-nexrad-l3:latest "${@}"
 fi

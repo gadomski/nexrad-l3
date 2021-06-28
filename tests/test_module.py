@@ -1,8 +1,8 @@
 import unittest
 
-import stactools.package
+import stactools.nexrad_l3
 
 
 class TestModule(unittest.TestCase):
     def test_version(self):
-        self.assertIsNotNone(stactools.package.__version__)
+        self.assertIsNotNone(stactools.nexrad_l3.__version__)

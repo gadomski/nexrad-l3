@@ -8,7 +8,7 @@ RUN conda update conda && conda install pip
 COPY environment.yml /tmp/environment.yml
 RUN conda env update -f /tmp/environment.yml -n base && rm /tmp/environment.yml
 
-COPY . /tmp/stactools-package
-RUN cd /tmp/stactools-package && pip install . && rm -rf /tmp/stactools-package
+COPY . /tmp/stactools-nexrad-l3
+RUN cd /tmp/stactools-nexrad-l3 && pip install . && rm -rf /tmp/stactools-nexrad-l3
 
 ENTRYPOINT [ "python", "-m", "stactools.cli" ]
